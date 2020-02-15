@@ -1,38 +1,45 @@
 #include <iostream>
 #include <vector>
 
-void DisplayBoard(vector<char> b);
 std::vector<char> CreateBoard();
+void DisplayBoard(std::vector<char> board);
+std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn);
+int GetPlayerChoice();
 
 int main() {
     std::vector board = CreateBoard();
+    DisplayBoard(board);
 }
 
-std::vector<char> CreateBoard()
-{
-    std::vector<char> b = {{'_','_','_'},
-						   {'_','_','_'},
-						   {'_','_','_'}};
+std::vector<char> CreateBoard(){
+    std::vector<char> b = {'1','2','3','4','5','6','7','8','9'};
     return b;
 }
 
-void DisplayBoard(vector<char> b)
-{
-	for (int i = 0; i < b.size(); i++)
-	{
-		for (int j = 0; j < b[i].size(); j++)
-		{
-			std::cout << b[i][j]; << " ";
-		}
-		std::cout << endl;
-	}
-}
-
 // Reqeusts and returns user's Tic Tac Toe marker spot
-int GetPlayerChoice(std::vector<char> board) {
-	
+int GetPlayerChoice() {	
 	int choice;
 	std::cout << "Choose an open spot (1-9) to place your marker: ";
 	std::cin >> choice;
 	return choice;
 }
+
+void DisplayBoard(std::vector<char> board){
+    for (int i = 0; i < (int)board.size(); i++){
+        std::cout << " " <<board.at(i) << " ";
+        if ((i+1)%3==0){
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;
+}
+
+std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn){
+    if (turn%2==0){
+        board.at(m-1) = 'X';
+    } else {
+        board.at(m-1) = 'O';
+    }
+    return board;
+}
+
