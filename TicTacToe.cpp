@@ -8,7 +8,14 @@ int GetPlayerChoice();
 
 int main() {
     std::vector board = CreateBoard();
-    DisplayBoard(board);
+	
+	int m, turns = 0;
+	for (int i = 0; i < 9; i++) {
+		DisplayBoard(board);
+		m = GetPlayerChoice();
+		PlaceMarker(board, m, turn);
+		turn++;
+	}
 }
 
 std::vector<char> CreateBoard(){
