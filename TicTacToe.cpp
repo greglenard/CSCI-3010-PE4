@@ -27,3 +27,12 @@ void DisplayBoard(vector<char> b)
 		std::cout << endl;
 	}
 }
+
+// Reqeusts and returns user's Tic Tac Toe marker spot
+int GetPlayerChoice(std::vector<char> board) {
+	
+	int choice;
+	std::cout << "Choose an open spot (1-9) to place your marker: ";
+	std::cin >> choice;
+	return choice;
+}
