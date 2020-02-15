@@ -7,7 +7,13 @@ std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn);
 int GetPlayerChoice();
 
 int main() {
+    int move;
     std::vector board = CreateBoard();
+    for(int i = 0; i < 9; i++){
+        DisplayBoard(board);
+        move = GetPlayerChoice();
+        board = PlaceMarker(board, move, i);
+    }
     DisplayBoard(board);
 }
 
