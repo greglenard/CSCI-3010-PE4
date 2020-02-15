@@ -1,3 +1,4 @@
+ub@ub:~/Desktop/pe4.2/CSCI-3010-PE4$ g++ -std=c++17 -Wall TicTacToe.cpp -o game
 ub@ub:~/Desktop/pe4.2/CSCI-3010-PE4$ ./game
  1  2  3 
  4  5  6 
