@@ -3,17 +3,10 @@
 
 std::vector<char> CreateBoard();
 void DisplayBoard(std::vector<char> board);
-int GetPlayerChoice();
 std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn);
 
 int main() {
-    int move;
     std::vector board = CreateBoard();
-    for(int i = 0; i < 9; i++){
-        DisplayBoard(board);
-        move = GetPlayerChoice();
-        board = PlaceMarker(board, move, i);
-    }
     DisplayBoard(board);
 }
 
