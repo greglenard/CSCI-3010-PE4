@@ -14,6 +14,6 @@ To run the program:
  
  3. In the command line compile the program by typing 
  
-        g++ -Wall TicTacToe.cpp -0 TicTacToe
+        g++ -std=c++17 -Wall TicTacToe.cpp -o game
         
 4. Hit enter and follow prompts
