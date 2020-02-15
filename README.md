@@ -16,4 +16,8 @@ To run the program:
  
         g++ -std=c++17 -Wall TicTacToe.cpp -o game
         
-4. Hit enter and follow prompts
+4. Hit enter then type
+     
+        ./game 
+        
+5. Hit enter and follow prompts
