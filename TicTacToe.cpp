@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-//void DisplayBoard();
 std::vector<char> CreateBoard();
 void DisplayBoard(std::vector<char> board);
 
