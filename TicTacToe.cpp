@@ -1,29 +1,26 @@
 #include <iostream>
 #include <vector>
 
-void DisplayBoard(vector<char> b);
 std::vector<char> CreateBoard();
+void DisplayBoard(std::vector<char> board);
 
 int main() {
     std::vector board = CreateBoard();
 }
 
-std::vector<char> CreateBoard()
-{
-    std::vector<char> b = {{'_','_','_'},
-						   {'_','_','_'},
-						   {'_','_','_'}};
+std::vector<char> CreateBoard(){
+    std::vector<char> b = {'_','_','_','_','_','_','_','_','_'};
     return b;
 }
 
-void DisplayBoard(vector<char> b)
-{
-	for (int i = 0; i < b.size(); i++)
-	{
-		for (int j = 0; j < b[i].size(); j++)
-		{
-			std::cout << b[i][j]; << " ";
-		}
-		std::cout << endl;
-	}
+void DisplayBoard(std::vector<char> board){
+    for (int i = 0; i < board.size(); i++){
+        std::cout << " " <<board.at(i) << " ";
+        if ((i+1)%3==0){
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;
 }
+
+
