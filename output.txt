@@ -1,0 +1,49 @@
+ub@ub:~/Desktop/pe4.2/CSCI-3010-PE4$ ./game
+ 1  2  3 
+ 4  5  6 
+ 7  8  9 
+
+Choose an open spot (1-9) to place your marker: 1
+ X  2  3 
+ 4  5  6 
+ 7  8  9 
+
+Choose an open spot (1-9) to place your marker: 5
+ X  2  3 
+ 4  O  6 
+ 7  8  9 
+
+Choose an open spot (1-9) to place your marker: 9
+ X  2  3 
+ 4  O  6 
+ 7  8  X 
+
+Choose an open spot (1-9) to place your marker: 3
+ X  2  O 
+ 4  O  6 
+ 7  8  X 
+
+Choose an open spot (1-9) to place your marker: 7
+ X  2  O 
+ 4  O  6 
+ X  8  X 
+
+Choose an open spot (1-9) to place your marker: 8
+ X  2  O 
+ 4  O  6 
+ X  O  X 
+
+Choose an open spot (1-9) to place your marker: 4
+ X  2  O 
+ X  O  6 
+ X  O  X 
+
+Choose an open spot (1-9) to place your marker: 2
+ X  O  O 
+ X  O  6 
+ X  O  X 
+
+Choose an open spot (1-9) to place your marker: 6
+ X  O  O 
+ X  O  X 
+ X  O  X 
