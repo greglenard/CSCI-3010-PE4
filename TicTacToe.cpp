@@ -4,19 +4,17 @@
 std::vector<char> CreateBoard();
 void DisplayBoard(std::vector<char> board);
 int GetPlayerChoice();
+std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn);
 
 int main() {
     int move;
     std::vector board = CreateBoard();
     for(int i = 0; i < 9; i++){
         DisplayBoard(board);
-        int move = GetPlayerChoice();
-        if (i%2==0){
-            board.at(move-1) = 'X';
-        } else {
-            board.at(move-1) = 'O';
-        }
+        move = GetPlayerChoice();
+        board = PlaceMarker(board, move, i);
     }
+    DisplayBoard(board);
 }
 
 std::vector<char> CreateBoard(){
@@ -25,7 +23,7 @@ std::vector<char> CreateBoard(){
 }
 
 void DisplayBoard(std::vector<char> board){
-    for (int i = 0; i < board.size(); i++){
+    for (int i = 0; i < (int)board.size(); i++){
         std::cout << " " <<board.at(i) << " ";
         if ((i+1)%3==0){
             std::cout << std::endl;
@@ -43,3 +41,11 @@ int GetPlayerChoice() {
     return pc;
 }
 
+std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn){
+    if (turn%2==0){
+        board.at(m-1) = 'X';
+    } else {
+        board.at(m-1) = 'O';
+    }
+    return board;
+}
