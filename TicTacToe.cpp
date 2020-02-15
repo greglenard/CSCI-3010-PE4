@@ -32,15 +32,6 @@ void DisplayBoard(std::vector<char> board){
     std::cout << std::endl;
 }
 
-int GetPlayerChoice() {
-    std::cout << "left -> Right, Top -> bottom (1-9)" << std::endl;
-    std::cout << "Enter choice:  ";
-    int pc = 0;
-    std::cin >> pc;
-    std::cout << std::endl;
-    return pc;
-}
-
 std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn){
     if (turn%2==0){
         board.at(m-1) = 'X';
