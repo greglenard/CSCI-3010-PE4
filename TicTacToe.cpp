@@ -3,9 +3,11 @@
 
 std::vector<char> CreateBoard();
 void DisplayBoard(std::vector<char> board);
+std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn);
 
 int main() {
     std::vector board = CreateBoard();
+    DisplayBoard(board);
 }
 
 std::vector<char> CreateBoard(){
@@ -14,7 +16,7 @@ std::vector<char> CreateBoard(){
 }
 
 void DisplayBoard(std::vector<char> board){
-    for (int i = 0; i < board.size(); i++){
+    for (int i = 0; i < (int)board.size(); i++){
         std::cout << " " <<board.at(i) << " ";
         if ((i+1)%3==0){
             std::cout << std::endl;
@@ -23,4 +25,11 @@ void DisplayBoard(std::vector<char> board){
     std::cout << std::endl;
 }
 
-
+std::vector<char> PlaceMarker(std::vector<char> board, int m, int turn){
+    if (turn%2==0){
+        board.at(m-1) = 'X';
+    } else {
+        board.at(m-1) = 'O';
+    }
+    return board;
+}
